@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="KasztanSeo:kukanqtokasztan" content="true">
+	<title>a weird js thingy</title>
+	<style>
+		body {
+			line-height: 1.5;
+		}
+
+		* {
+			font-family: "Helvetica", "Ubuntu", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>
+		Hello <span data-pzpl-text="name">World</span>, all hail the <span data-pzpl-html="name">World</span>!
+	</h1>
+	<input type="text" data-pzpl-value="name">
+	<input type="text" data-pzpl-value="name">
+	<br><br>
+	<hr>
+	<h2>
+		The checkbox is <span data-pzpl-text="music">Not defined</span>
+	</h2>
+	<input type="checkbox" data-pzpl-value="music"><label>Check me</label>
+	<audio src="music.webm" data-pzpl-bind="music"></audio>
+	<i data-pzpl-if="music">The music is now playing.</i>
+	<br><br>
+	<hr>
+	<img src="img0.jpeg" alt="Koniec pokazu slajdów" decoding="async" loading="lazy" data-pzpl-src="poziom">
+	<button data-pzpl-up="poziom">Dalej</button>
+	<button data-pzpl-down="poziom">Wróć</button>
+	<br><br>
+	<hr>
+	<h3>Selected size: <span data-pzpl-text="slidered"></span></h3>
+	<input type="range" data-pzpl-value="slidered">
+	<br><br>
+	<hr>
+	<h4>Selected size: <span data-pzpl-text="chlote"></span></h4>
+	<select data-pzpl-value="chlote">
+		<option value="S">S</option>
+		<option value="M">M</option>
+		<option value="XL">XL</option>
+		<option value="XXL">XXL</option>
+	</select><br><br>
+	<hr>
+	<h4>Your info</h4>
+	<input type="tel" data-pzpl-value="phone"> <label>Your phone number</label><br><br>
+	<input type="email" data-pzpl-value="email"> <label>Your E-Mail</label><br><br>
+	<input type="password" data-pzpl-value="pass"> <label>Your password</label><br><br>
+	<input type="text" data-pzpl-value="username"> <label>Your Username</label><br><br>
+	<input type="text" data-pzpl-value="fullname"> <label>Your Name</label><br><br>
+	<p>Your data: <span data-pzpl-text="phone"></span>
+		<span data-pzpl-text="email"></span>
+		<span data-pzpl-text="pass" data-pzpl-password></span>
+		<span data-pzpl-text="username"></span>
+		<span data-pzpl-text="fullname"></span>
+	</p>
+	<br><br>
+	<hr>
+	<h4>Clickety Click!</h4>
+	<p data-pzpl-count-text="count">0</p>
+	<button data-pzpl-up="count">+</button>
+	<button data-pzpl-down="count">-</button>
+	<br><br>
+	<hr>
+	<h4>ForEach blocks</h4>
+	<ul data-pzpl-for="[
+			{ 'name': 'Kukanq, kasztan' },
+			{ 'name': 'Content, yes' },
+			{ 'name': 'h, hhhh' },
+			{ 'name': 'Chicken, go brr' }
+		]">
+		<li data-slot="name"></li>
+	</ul>
+	<script src="./script.js" async defer></script>
+</body>
+
+</html>
